@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Decolonial — Glosario Tipográfico | FADU UBA</title>
+  
+  <!-- Tipografía Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-decolonial">
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="site-header" id="top-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="#home" class="brand-link" id="brand-home-link" aria-label="Ir al inicio">
+          <span class="brand-title">DISEÑO DECOLONIAL</span>
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-nav="home">EXPLORAR</a></li>
+          <li><a href="#rutas" class="nav-link" data-nav="rutas">RUTAS</a></li>
+          <li><a href="#compartidos" class="nav-link" data-nav="compartidos">CONCEPTOS PUENTE</a></li>
+          <li><a href="#fuentes" class="nav-link" data-nav="fuentes">FUENTES</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-trigger-wrapper">
+          <div class="search-input-box" id="search-box">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="global-search-input" placeholder="Buscar..." autocomplete="off" aria-label="Buscar concepto en el glosario">
+            <button type="button" id="search-clear-btn" class="search-clear" aria-label="Limpiar búsqueda" style="display: none;">✕</button>
+          </div>
+          <!-- Dropdown con resultados en tiempo real -->
+          <div class="search-results-dropdown" id="search-results" style="display: none;" role="listbox"></div>
+        </div>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL DE VISTAS -->
+  <main id="app-main">
+    
+    <!-- ========================================== -->
+    <!-- VISTA 1: HOME / EXPLORAR                   -->
+    <!-- ========================================== -->
+    <div id="view-home" class="app-view active-view">
+      
+      <!-- HERO EDITORIAL -->
+      <section class="hero-section container">
+        <div class="hero-grid">
+          
+          <!-- Columna izquierda: Información e interacciones directas -->
+          <div class="hero-content">
+            <div class="hero-kicker">UN ATLAS PARA PREGUNTAR CÓMO DISEÑAMOS</div>
+            <h1 class="hero-main-title">
+              DISEÑO<br>DECOLONIAL
+            </h1>
+            <p class="hero-lead">
+              Una plataforma para explorar ideas, saberes y relaciones que cuestionan una única forma de producir conocimiento y diseñar.
+            </p>
+
+            <!-- Jerarquía de Acciones del Hero: Acción Principal y Secundaria -->
+            <div class="hero-actions-container">
+              <a href="#rutas" class="hero-cta-btn hero-cta-primary" id="hero-btn-explore" aria-label="Explorar los cuatro recorridos conceptuales">
+                <span>EXPLORAR RECORRIDOS</span>
+                <span class="hero-cta-arrow" aria-hidden="true">↓</span>
+              </a>
+              <a href="#compartidos" class="hero-cta-btn hero-cta-secondary" id="hero-btn-puentes" aria-label="Ir a los 8 conceptos puente compartidos">
+                <span>CONCEPTOS PUENTE</span>
+                <span class="hero-cta-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna derecha: Composición gráfica editorial (Introducción al Sistema Cromático) -->
+          <div class="hero-composition">
+            <div class="poster-stack" aria-label="Introducción visual interactiva a las tres familias cromáticas">
+              <!-- Bloque Amarillo: 01 CONOCER -->
+              <a href="#conocer" class="poster-plane plane-yellow" id="hero-plane-conocer" aria-label="Explorar Recorrido 01 Conocer: ¿Quién decide qué conocimiento cuenta?">
+                <span class="plane-route-badge badge-yellow">01 · FAMILIA AMARILLA / CONOCER</span>
+                <p class="plane-text-yellow">¿QUIÉN DECIDE QUÉ CONOCIMIENTO CUENTA?</p>
+                <span class="plane-mobile-cue" aria-hidden="true">→ VER RECORRIDO</span>
+                <div class="plane-hover-reveal" aria-hidden="true">
+                  <div class="plane-hover-meta">
+                    <strong class="plane-hover-name">01 · CONOCER</strong>
+                    <span class="plane-hover-desc">Cuestionar categorías heredadas · 11 conceptos</span>
+                  </div>
+                  <span class="plane-hover-action">VER RECORRIDO <span class="plane-hover-arrow">→</span></span>
+                </div>
+              </a>
+              <!-- Bloque Rojo: 02 HABITAR -->
+              <a href="#habitar" class="poster-plane plane-red" id="hero-plane-habitar" aria-label="Explorar Recorrido 02 Habitar: El territorio y el cuerpo como memoria viva">
+                <span class="plane-route-badge badge-red">02 · FAMILIA ROJA / HABITAR</span>
+                <p class="plane-text-red">EL TERRITORIO Y EL CUERPO COMO MEMORIA VIVA</p>
+                <span class="plane-mobile-cue" aria-hidden="true">→ VER RECORRIDO</span>
+                <div class="plane-hover-reveal" aria-hidden="true">
+                  <div class="plane-hover-meta">
+                    <strong class="plane-hover-name">02 · HABITAR</strong>
+                    <span class="plane-hover-desc">Cuerpo, territorio y cuidado · 8 conceptos</span>
+                  </div>
+                  <span class="plane-hover-action">VER RECORRIDO <span class="plane-hover-arrow">→</span></span>
+                </div>
+              </a>
+              <!-- Bloque Azul: 03 DESOBEDECER -->
+              <a href="#desobedecer" class="poster-plane plane-blue" id="hero-plane-desobedecer" aria-label="Explorar Recorrido 03 Desobedecer: Otras formas de conocer también cuentan">
+                <span class="plane-route-badge badge-blue">03 · FAMILIA AZUL / DESOBEDECER</span>
+                <p class="plane-text-blue">“Otras formas de conocer también cuentan.”</p>
+                <span class="plane-mobile-cue" aria-hidden="true">→ VER RECORRIDO</span>
+                <div class="plane-hover-reveal" aria-hidden="true">
+                  <div class="plane-hover-meta">
+                    <strong class="plane-hover-name">03 · DESOBEDECER</strong>
+                    <span class="plane-hover-desc">Desafiar estructuras de dominación · 11 conceptos</span>
+                  </div>
+                  <span class="plane-hover-action">VER RECORRIDO <span class="plane-hover-arrow">→</span></span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-meta-bar">
+          <div class="meta-tagline">
+            <span class="meta-dot-indicator">●</span>
+            ATLAS TIPOGRÁFICO DECOLONIAL · 4 RECORRIDOS · 8 PUENTES · 41 CONCEPTOS
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN RESUMEN DE RUTAS: 4 GRANDES ENTRADAS -->
+      <section class="routes-summary-section container" id="rutas">
+        <div class="section-intro-bar">
+          <div class="section-intro-kicker">CUATRO RECORRIDOS CONCEPTUALES</div>
+          <div class="section-intro-instruction">ELEGÍ UNA RUTA PARA COMENZAR ↓</div>
+        </div>
+
+        <div class="routes-cards-grid">
+          <!-- RUTA 01 -->
+          <a href="#conocer" class="route-summary-card card-route-yellow" data-route-id="conocer" aria-label="Explorar ruta 01 Conocer">
+            <div class="route-card-main">
+              <h2 class="route-card-title">01 · CONOCER</h2>
+              <h3 class="route-card-question">¿QUÉ CONSIDERAMOS CONOCIMIENTO?</h3>
+              <p class="route-card-desc">
+                Explora las distintas formas de producir, transmitir y validar saberes.
+              </p>
+            </div>
+            <div class="route-card-footer">
+              <span class="route-count-badge">11 CONCEPTOS</span>
+              <span class="route-card-action-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <!-- RUTA 02 -->
+          <a href="#habitar" class="route-summary-card card-route-red" data-route-id="habitar" aria-label="Explorar ruta 02 Habitar">
+            <div class="route-card-main">
+              <h2 class="route-card-title">02 · HABITAR</h2>
+              <h3 class="route-card-question">¿DESDE DÓNDE SE PRODUCE EL CONOCIMIENTO?</h3>
+              <p class="route-card-desc">
+                Explora la relación entre cuerpo, territorio, comunidad y formas de vida.
+              </p>
+            </div>
+            <div class="route-card-footer">
+              <span class="route-count-badge">8 CONCEPTOS</span>
+              <span class="route-card-action-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <!-- RUTA 03 -->
+          <a href="#desobedecer" class="route-summary-card card-route-blue" data-route-id="desobedecer" aria-label="Explorar ruta 03 Desobedecer">
+            <div class="route-card-main">
+              <h2 class="route-card-title">03 · DESOBEDECER</h2>
+              <h3 class="route-card-question">¿QUIÉN DECIDE QUÉ SABERES SON VÁLIDOS?</h3>
+              <p class="route-card-desc">
+                Cuestiona las estructuras coloniales que jerarquizan y excluyen conocimientos.
+              </p>
+            </div>
+            <div class="route-card-footer">
+              <span class="route-count-badge">11 CONCEPTOS</span>
+              <span class="route-card-action-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <!-- RUTA 04: ESPACIO DE ENCUENTRO ENTRE LAS TRES FAMILIAS -->
+          <a href="#relacionar" class="route-summary-card card-route-relacionar card-route-encounter" data-route-id="relacionar" aria-label="Explorar ruta 04 Relacionar">
+            <div class="route-card-main">
+              <h2 class="route-card-title">04 · RELACIONAR</h2>
+              <h3 class="route-card-question">¿QUÉ PASA CUANDO DISTINTOS SABERES SE ENCUENTRAN?</h3>
+              <p class="route-card-desc">
+                Explora sus cruces, tensiones y posibilidades de diálogo.
+              </p>
+            </div>
+            <div class="route-card-footer">
+              <div class="route-triad-footer-group">
+                <div class="route-triad-header-badge" aria-hidden="true">
+                  <span class="triad-chip chip-y">01</span>
+                  <span class="triad-plus">+</span>
+                  <span class="triad-chip chip-r">02</span>
+                  <span class="triad-plus">+</span>
+                  <span class="triad-chip chip-b">03</span>
+                </div>
+                <span class="route-count-badge">11 CONCEPTOS</span>
+              </div>
+              <span class="route-card-action-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO RUTA 01: CONOCER (FAMILIA AMARILLA) -->
+      <section class="route-chapter-section container chapter-conocer" id="conocer">
+        <header class="chapter-header">
+          <div class="chapter-title-group">
+            <span class="chapter-number number-yellow">01</span>
+            <h2 class="chapter-title">CONOCER</h2>
+            <p class="chapter-bajada">
+              Familia Amarilla / Ocre · Conceptos que cuestionan las categorías heredadas de la modernidad y abren paso a otros saberes.
+            </p>
+          </div>
+          <div class="chapter-count-indicator">
+            <div class="vertical-divider yellow-bar"></div>
+            <span class="count-text">11 CONCEPTOS<br>FAMILIA AMARILLA</span>
+          </div>
+        </header>
+
+        <div class="route-cards-carousel-container" data-route="conocer">
+          <button type="button" class="carousel-arrow-btn arrow-prev" data-route="conocer" aria-label="Concepto anterior de 01 Conocer">
+            <span aria-hidden="true">←</span>
+          </button>
+          <div class="concepts-grid grid-route-01" id="grid-conocer">
+            <!-- Renderizado dinámico desde data.js -->
+          </div>
+          <button type="button" class="carousel-arrow-btn arrow-next" data-route="conocer" aria-label="Concepto siguiente de 01 Conocer">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="carousel-dots-row" id="dots-conocer" aria-label="Navegación de conceptos de Conocer"></div>
+
+        <!-- Navegación editorial al pie de capítulo -->
+        <div class="chapter-nav-footer">
+          <a href="#rutas" class="chapter-nav-btn btn-nav-index" aria-label="Volver al índice de los 4 recorridos">↑ ÍNDICE DE RECORRIDOS</a>
+          <a href="#habitar" class="chapter-nav-btn btn-nav-next" aria-label="Ir al siguiente recorrido: 02 Habitar">
+            <span>SIGUIENTE: 02 HABITAR</span>
+            <span class="nav-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO RUTA 02: HABITAR (FAMILIA ROJA) -->
+      <section class="route-chapter-section container chapter-habitar" id="habitar">
+        <header class="chapter-header">
+          <div class="chapter-title-group">
+            <span class="chapter-number number-red">02</span>
+            <h2 class="chapter-title">HABITAR</h2>
+            <p class="chapter-bajada">
+              Familia Roja · Formas de vincularse con el territorio, el cuerpo y el cuidado de la vida comunitaria.
+            </p>
+          </div>
+          <div class="chapter-count-indicator">
+            <div class="vertical-divider red-bar"></div>
+            <span class="count-text">8 CONCEPTOS<br>FAMILIA ROJA</span>
+          </div>
+        </header>
+
+        <div class="route-cards-carousel-container" data-route="habitar">
+          <button type="button" class="carousel-arrow-btn arrow-prev" data-route="habitar" aria-label="Concepto anterior de 02 Habitar">
+            <span aria-hidden="true">←</span>
+          </button>
+          <div class="concepts-grid grid-route-02" id="grid-habitar">
+            <!-- Renderizado dinámico desde data.js -->
+          </div>
+          <button type="button" class="carousel-arrow-btn arrow-next" data-route="habitar" aria-label="Concepto siguiente de 02 Habitar">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="carousel-dots-row" id="dots-habitar" aria-label="Navegación de conceptos de Habitar"></div>
+
+        <!-- Navegación editorial al pie de capítulo -->
+        <div class="chapter-nav-footer">
+          <a href="#rutas" class="chapter-nav-btn btn-nav-index" aria-label="Volver al índice de los 4 recorridos">↑ ÍNDICE DE RECORRIDOS</a>
+          <a href="#desobedecer" class="chapter-nav-btn btn-nav-next" aria-label="Ir al siguiente recorrido: 03 Desobedecer">
+            <span>SIGUIENTE: 03 DESOBEDECER</span>
+            <span class="nav-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO RUTA 03: DESOBEDECER (FAMILIA AZUL) -->
+      <section class="route-chapter-section container chapter-desobedecer" id="desobedecer">
+        <header class="chapter-header">
+          <div class="chapter-title-group">
+            <span class="chapter-number number-blue">03</span>
+            <h2 class="chapter-title">DESOBEDECER</h2>
+            <p class="chapter-bajada">
+              Familia Azul · Conceptos que desafían las estructuras de dominación y abren alternativas proyectuales.
+            </p>
+          </div>
+          <div class="chapter-count-indicator">
+            <div class="vertical-divider blue-bar"></div>
+            <span class="count-text">11 CONCEPTOS<br>FAMILIA AZUL</span>
+          </div>
+        </header>
+
+        <div class="route-cards-carousel-container" data-route="desobedecer">
+          <button type="button" class="carousel-arrow-btn arrow-prev" data-route="desobedecer" aria-label="Concepto anterior de 03 Desobedecer">
+            <span aria-hidden="true">←</span>
+          </button>
+          <div class="concepts-grid grid-route-03" id="grid-desobedecer">
+            <!-- Renderizado dinámico desde data.js -->
+          </div>
+          <button type="button" class="carousel-arrow-btn arrow-next" data-route="desobedecer" aria-label="Concepto siguiente de 03 Desobedecer">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="carousel-dots-row" id="dots-desobedecer" aria-label="Navegación de conceptos de Desobedecer"></div>
+
+        <!-- Navegación editorial al pie de capítulo -->
+        <div class="chapter-nav-footer">
+          <a href="#rutas" class="chapter-nav-btn btn-nav-index" aria-label="Volver al índice de los 4 recorridos">↑ ÍNDICE DE RECORRIDOS</a>
+          <a href="#relacionar" class="chapter-nav-btn btn-nav-next" aria-label="Ir al siguiente recorrido: 04 Relacionar">
+            <span>SIGUIENTE: 04 RELACIONAR</span>
+            <span class="nav-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO RUTA 04: RELACIONAR (ENCUENTRO DE FAMILIAS) -->
+      <section class="route-chapter-section container chapter-relacionar chapter-encounter" id="relacionar">
+        <header class="chapter-header">
+          <div class="chapter-title-group">
+            <div class="encounter-eyebrow">
+              <span class="encounter-chip chip-y">01 CONOCER</span>
+              <span class="encounter-term-group">
+                <span class="encounter-plus">+</span>
+                <span class="encounter-chip chip-r">02 HABITAR</span>
+              </span>
+              <span class="encounter-term-group">
+                <span class="encounter-plus">+</span>
+                <span class="encounter-chip chip-b">03 DESOBEDECER</span>
+              </span>
+            </div>
+            <span class="chapter-number number-triad">04</span>
+            <h2 class="chapter-title">RELACIONAR</h2>
+            <p class="chapter-bajada">
+              Lugar donde se encuentran las tres familias: articulación de saberes diversos, justicia cognitiva y tender puentes hacia el pluriverso.
+            </p>
+          </div>
+          <div class="chapter-count-indicator">
+            <div class="vertical-divider triad-bar">
+              <span class="triad-segment segment-y"></span>
+              <span class="triad-segment segment-r"></span>
+              <span class="triad-segment segment-b"></span>
+            </div>
+            <span class="count-text">11 CONCEPTOS<br>ESPACIO DE ENCUENTRO</span>
+          </div>
+        </header>
+
+        <div class="route-cards-carousel-container" data-route="relacionar">
+          <button type="button" class="carousel-arrow-btn arrow-prev" data-route="relacionar" aria-label="Concepto anterior de 04 Relacionar">
+            <span aria-hidden="true">←</span>
+          </button>
+          <div class="concepts-grid grid-route-04" id="grid-relacionar">
+            <!-- Renderizado dinámico desde data.js (con Epistemologías del Sur destacada) -->
+          </div>
+          <button type="button" class="carousel-arrow-btn arrow-next" data-route="relacionar" aria-label="Concepto siguiente de 04 Relacionar">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="carousel-dots-row" id="dots-relacionar" aria-label="Navegación de conceptos de Relacionar"></div>
+
+        <!-- Navegación editorial al pie de capítulo -->
+        <div class="chapter-nav-footer">
+          <a href="#rutas" class="chapter-nav-btn btn-nav-index" aria-label="Volver al índice de los 4 recorridos">↑ ÍNDICE DE RECORRIDOS</a>
+          <a href="#compartidos" class="chapter-nav-btn btn-nav-next" aria-label="Ir a los conceptos puente">
+            <span>EXPLORAR CONCEPTOS PUENTE</span>
+            <span class="nav-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: 8 CONCEPTOS COMPARTIDOS / PUENTES -->
+      <section class="shared-bridges-section container" id="compartidos">
+        <div class="bridges-layout">
+          <div class="bridges-text-col">
+            <h2 class="bridges-title">8 CONCEPTOS COMPARTIDOS</h2>
+            <p class="bridges-bajada">
+              Funcionan como puentes entre glosarios y campos de conocimiento. Hacé click en cualquiera para ver su definición decolonial.
+            </p>
+          </div>
+
+          <div class="bridges-ribbons-col" id="shared-ribbons-container">
+            <!-- Ribbons renderizados dinámicamente -->
+          </div>
+        </div>
+
+        <!-- Navegación editorial al pie de puentes -->
+        <div class="chapter-nav-footer bridges-nav-footer">
+          <a href="#rutas" class="chapter-nav-btn btn-nav-index" aria-label="Volver al índice de recorridos">↑ ÍNDICE DE RECORRIDOS</a>
+          <a href="#fuentes" class="chapter-nav-btn btn-nav-next" aria-label="Ir a fuentes y referencias">
+            <span>FUENTES Y REFERENCIAS</span>
+            <span class="nav-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: FUENTES Y REFERENCIAS (CIERRE EDITORIAL / BIBLIOGRÁFICO) -->
+      <section class="sources-references-section container" id="fuentes" aria-label="Fuentes y Referencias">
+        <header class="biblio-header">
+          <div class="biblio-meta-top">
+            <span class="biblio-kicker">MARCO TEÓRICO Y BIBLIOGRÁFICO</span>
+            <span class="biblio-accent-dots" aria-hidden="true">
+              <span class="dot-color dot-yellow"></span>
+              <span class="dot-color dot-red"></span>
+              <span class="dot-color dot-blue"></span>
+            </span>
+          </div>
+          <h2 class="biblio-heading">FUENTES Y REFERENCIAS</h2>
+          <p class="biblio-bajada">
+            Lecturas y marcos teóricos que acompañan la problematización decolonial del conocimiento, el territorio y la práctica proyectual.
+          </p>
+        </header>
+
+        <div class="biblio-layout">
+          
+          <!-- Columna 1: PENSAMIENTO DECOLONIAL -->
+          <div class="biblio-col">
+            <div class="biblio-group">
+              <h3 class="biblio-group-title">
+                <span class="biblio-group-dot dot-yellow" aria-hidden="true"></span>
+                PENSAMIENTO DECOLONIAL
+              </h3>
+
+              <ul class="biblio-list" role="list">
+                <!-- Ref 1: Boaventura 2014 -->
+                <li class="biblio-entry">
+                  <div class="biblio-entry-header">
+                    <span class="biblio-author">Boaventura de Sousa Santos</span>
+                    <span class="biblio-year">2014</span>
+                  </div>
+                  <div class="biblio-work">
+                    <a href="https://www.routledge.com/Epistemologies-of-the-South-Justice-Against-Epistemicide/Santos/p/book/9781612056333" target="_blank" rel="noopener noreferrer" class="biblio-link" aria-label="Epistemologies of the South en Routledge (abre en nueva pestaña)">
+                      <em>Epistemologies of the South: Justice Against Epistemicide</em>
+                      <span class="biblio-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <div class="biblio-meta">
+                    <span class="biblio-publisher">Routledge</span>
+                  </div>
+                </li>
+
+                <!-- Ref 2: Boaventura 2007 -->
+                <li class="biblio-entry">
+                  <div class="biblio-entry-header">
+                    <span class="biblio-author">Boaventura de Sousa Santos</span>
+                    <span class="biblio-year">2007</span>
+                  </div>
+                  <div class="biblio-work">
+                    <a href="https://www.jstor.org/stable/40241677" target="_blank" rel="noopener noreferrer" class="biblio-link" aria-label="Beyond Abyssal Thinking en JSTOR (abre en nueva pestaña)">
+                      <em>“Beyond Abyssal Thinking: From Global Lines to Ecologies of Knowledges”</em>
+                      <span class="biblio-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <div class="biblio-meta">
+                    <span class="biblio-publisher">Review (Fernand Braudel Center)</span>
+                  </div>
+                </li>
+
+                <!-- Ref 3: Silvia Rivera Cusicanqui 2010 -->
+                <li class="biblio-entry">
+                  <div class="biblio-entry-header">
+                    <span class="biblio-author">Silvia Rivera Cusicanqui</span>
+                    <span class="biblio-year">2010</span>
+                  </div>
+                  <div class="biblio-work">
+                    <a href="https://tintalimon.com.ar/libro/chixinakax-utxiwa/" target="_blank" rel="noopener noreferrer" class="biblio-link" aria-label="Ch’ixinakax utxiwa en Tinta Limón (abre en nueva pestaña)">
+                      <em>Ch’ixinakax utxiwa: Una reflexión sobre prácticas y discursos descolonizadores</em>
+                      <span class="biblio-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <div class="biblio-meta">
+                    <span class="biblio-publisher">Tinta Limón</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Columna 2: DISEÑO Y PLURIVERSO + REPRESENTACIÓN -->
+          <div class="biblio-col">
+            <!-- Grupo: DISEÑO Y PLURIVERSO -->
+            <div class="biblio-group">
+              <h3 class="biblio-group-title">
+                <span class="biblio-group-dot dot-red" aria-hidden="true"></span>
+                DISEÑO Y PLURIVERSO
+              </h3>
+
+              <ul class="biblio-list" role="list">
+                <!-- Ref 4: Arturo Escobar 2018 -->
+                <li class="biblio-entry">
+                  <div class="biblio-entry-header">
+                    <span class="biblio-author">Arturo Escobar</span>
+                    <span class="biblio-year">2018</span>
+                  </div>
+                  <div class="biblio-work">
+                    <a href="https://www.dukeupress.edu/designs-for-the-pluriverse" target="_blank" rel="noopener noreferrer" class="biblio-link" aria-label="Designs for the Pluriverse en Duke University Press (abre en nueva pestaña)">
+                      <em>Designs for the Pluriverse: Radical Interdependence, Autonomy, and the Making of Worlds</em>
+                      <span class="biblio-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <div class="biblio-meta">
+                    <span class="biblio-publisher">Duke University Press</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Grupo: REPRESENTACIÓN -->
+            <div class="biblio-group">
+              <h3 class="biblio-group-title">
+                <span class="biblio-group-dot dot-blue" aria-hidden="true"></span>
+                REPRESENTACIÓN
+              </h3>
+
+              <ul class="biblio-list" role="list">
+                <!-- Ref 5: bell hooks 1992 -->
+                <li class="biblio-entry">
+                  <div class="biblio-entry-header">
+                    <span class="biblio-author">bell hooks</span>
+                    <span class="biblio-year">1992</span>
+                  </div>
+                  <div class="biblio-work">
+                    <a href="https://www.routledge.com/Black-Looks-Race-and-Representation/hooks/p/book/9781138821552" target="_blank" rel="noopener noreferrer" class="biblio-link" aria-label="Black Looks en Routledge (abre en nueva pestaña)">
+                      <em>Black Looks: Race and Representation</em>
+                      <span class="biblio-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <div class="biblio-meta">
+                    <span class="biblio-publisher">South End Press</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cierre de navegación discreto -->
+        <div class="biblio-nav-footer">
+          <a href="#compartidos" class="chapter-nav-btn btn-nav-index" aria-label="Volver a conceptos puente">↑ CONCEPTOS PUENTE</a>
+          <a href="#home" class="chapter-nav-btn btn-nav-index" aria-label="Subir al inicio del atlas">↑ SUBIR AL INICIO</a>
+        </div>
+      </section>
+
+    </div><!-- /#view-home -->
+
+
+    <!-- ========================================== -->
+    <!-- VISTA 2: DETALLE EPISTEMOLOGÍAS DEL SUR    -->
+    <!-- ========================================== -->
+    <div id="view-detail" class="app-view">
+      
+      <!-- HERO DEL CONCEPTO DESTACADO -->
+      <header id="epistemologias-del-sur" class="detail-hero-section container">
+        <div class="detail-breadcrumb-bar">
+          <a href="#relacionar" class="btn-back-breadcrumb" id="detail-back-home">
+            <span class="arrow-back" aria-hidden="true">←</span> VOLVER A RELACIONAR
+          </a>
+          <span class="detail-badge-kicker">04 · RELACIONAR / FICHA CONCEPTUAL 22</span>
+        </div>
+
+        <div class="detail-hero-grid">
+          
+          <div class="detail-hero-text">
+            <h1 class="detail-main-title">
+              EPISTEMOLOGÍAS<br>DEL SUR
+            </h1>
+            <p class="detail-subtitle">
+              Una mirada que desborda el canon occidental: visibiliza saberes subordinados, reconoce la pluralidad del conocimiento y sitúa la práctica del diseño en la justicia cognitiva.
+            </p>
+
+            <!-- Navegación editorial interna del concepto -->
+            <nav class="detail-subsections-nav" aria-label="Navegación del concepto">
+              <a href="#seccion-que-son" class="detail-nav-pill" data-scroll-to="seccion-que-son">
+                <span class="detail-nav-num">01</span> ¿QUÉ SON?
+              </a>
+              <a href="#seccion-mas-alla-del-mapa" class="detail-nav-pill" data-scroll-to="seccion-mas-alla-del-mapa">
+                <span class="detail-nav-num">02</span> MÁS ALLÁ DEL MAPA
+              </a>
+              <a href="#seccion-en-diseno" class="detail-nav-pill" data-scroll-to="seccion-en-diseno">
+                <span class="detail-nav-num">03</span> EN DISEÑO
+              </a>
+              <a href="#seccion-relacionados" class="detail-nav-pill" data-scroll-to="seccion-relacionados">
+                <span class="detail-nav-num">04</span> CONCEPTOS RELACIONADOS
+              </a>
+            </nav>
+          </div>
+
+          <!-- Columna Derecha: Composición Gráfica de 3 Planos Editoriales Superpuestos -->
+          <div class="detail-composition" aria-label="Composición gráfica tri-cromática de Epistemologías del Sur">
+            <div class="detail-planes-stack">
+
+              <!-- PLANO 1: ROJO (Arriba / Derecha) -->
+              <a href="#seccion-que-son" 
+                 class="detail-plane detail-plane-red" 
+                 data-scroll-to="seccion-que-son" 
+                 aria-label="01 · ¿Qué son?: ¿Qué saberes quedaron fuera?">
+                <span class="detail-plane-text">¿QUÉ SABERES<br>QUEDARON FUERA?</span>
+                <span class="detail-plane-hint" aria-hidden="true">
+                  <span>01 · ¿QUÉ SON?</span>
+                  <span class="detail-plane-arrow">→</span>
+                </span>
+              </a>
+
+              <!-- PLANO 2: AMARILLO (Superpuesto hacia la izquierda) -->
+              <a href="#seccion-mas-alla-del-mapa" 
+                 class="detail-plane detail-plane-yellow" 
+                 data-scroll-to="seccion-mas-alla-del-mapa" 
+                 aria-label="02 · Más allá del mapa: Sur no es solo un lugar">
+                <span class="detail-plane-text">SUR ≠ SOLO<br>UN LUGAR</span>
+                <span class="detail-plane-hint" aria-hidden="true">
+                  <span>02 · MÁS ALLÁ DEL MAPA</span>
+                  <span class="detail-plane-arrow">→</span>
+                </span>
+              </a>
+
+              <!-- PLANO 3: AZUL (Abajo / Derecha) -->
+              <a href="#seccion-en-diseno" 
+                 class="detail-plane detail-plane-blue" 
+                 data-scroll-to="seccion-en-diseno" 
+                 aria-label="03 · En diseño: Otras voces, otros saberes">
+                <span class="detail-plane-text">OTRAS VOCES.<br>OTROS SABERES.</span>
+                <span class="detail-plane-hint" aria-hidden="true">
+                  <span>03 · EN DISEÑO</span>
+                  <span class="detail-plane-arrow">→</span>
+                </span>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- SUBSECCIÓN 01: ¿QUÉ SON? -->
+      <section class="detail-block-section block-editorial-canvas" id="seccion-que-son">
+        <div class="container block-inner">
+          <div class="block-left-col">
+            <div class="block-kicker">01 / ¿QUÉ SON?</div>
+            <h2 class="block-main-heading">
+              CONOCER TAMBIÉN ES UNA FORMA DE HACER VISIBLE.
+            </h2>
+            <div class="block-tags-list">
+              <span class="tag-item">04 · ENCUENTRO</span>
+              <span class="tag-sep">/</span>
+              <span class="tag-item">JUSTICIA COGNITIVA</span>
+              <span class="tag-sep">/</span>
+              <span class="tag-item">PLURIVERSO</span>
+            </div>
+
+            <!-- Marco Teórico Autoral -->
+            <div class="detail-author-reference">
+              <span class="ref-kicker">MARCO CONCEPTUAL</span>
+              <h3 class="ref-author">BOAVENTURA DE SOUSA SANTOS</h3>
+              <p class="ref-desc">
+                Sostiene que la comprensión del mundo es mucho más amplia que la comprensión occidental del mundo, y que la justicia social global es inseparable de la justicia cognitiva global.
+              </p>
+            </div>
+          </div>
+
+          <div class="block-right-col">
+            <!-- Definición Oficial del Glosario con Resaltado Tipográfico -->
+            <div class="block-editorial-body definition-editorial-lead">
+              <p>
+                Las epistemologías del Sur constituyen un conjunto de perspectivas que buscan <strong class="hl-term hl-conocer">visibilizar</strong> conocimientos producidos por comunidades históricamente subordinadas por los procesos coloniales. No hacen referencia únicamente a una ubicación geográfica, sino a experiencias sociales marcadas por la <strong class="hl-term hl-habitar">exclusión</strong> y la <strong class="hl-term hl-desobedecer">resistencia</strong>.
+              </p>
+              <p>
+                En diseño, invitan a <strong class="hl-term hl-conocer">ampliar</strong> las fuentes de referencia, <strong class="hl-term hl-habitar">valorar</strong> prácticas locales y <strong class="hl-term hl-desobedecer">reconocer</strong> que la producción de conocimiento excede ampliamente los ámbitos académicos tradicionales.
+              </p>
+            </div>
+
+            <!-- Análisis de los 6 Conceptos-Clave -->
+            <div class="definition-key-block">
+              <div class="key-block-header">
+                <span class="key-block-title">CONCEPTOS-CLAVE DE LA DEFINICIÓN</span>
+              </div>
+              <div class="six-terms-grid">
+                <div class="term-mini-card">
+                  <div class="term-mini-card-top">
+                    <span class="dot-color dot-yellow"></span>
+                    <span class="term-mini-name">VISIBILIZAR</span>
+                  </div>
+                  <p class="term-mini-role">Poner en primer plano memorias y conocimientos que el universalismo moderno declaró ignorancia o folklore.</p>
+                </div>
+
+                <div class="term-mini-card">
+                  <div class="term-mini-card-top">
+                    <span class="dot-color dot-red"></span>
+                    <span class="term-mini-name">EXCLUSIÓN</span>
+                  </div>
+                  <p class="term-mini-role">Señalar la línea abisal que separó saberes legítimos de experiencias subalternizadas por el colonialismo.</p>
+                </div>
+
+                <div class="term-mini-card">
+                  <div class="term-mini-card-top">
+                    <span class="dot-color dot-blue"></span>
+                    <span class="term-mini-name">RESISTENCIA</span>
+                  </div>
+                  <p class="term-mini-role">Reconocer prácticas vivas con las que comunidades sostienen su lengua, territorio y cosmovisión.</p>
+                </div>
+
+                <div class="term-mini-card">
+                  <div class="term-mini-card-top">
+                    <span class="dot-color dot-yellow"></span>
+                    <span class="term-mini-name">AMPLIAR</span>
+                  </div>
+                  <p class="term-mini-role">Incorporar archivos populares, historias orales y referencias visuales no hegemónicas a la disciplina.</p>
+                </div>
+
+                <div class="term-mini-card">
+                  <div class="term-mini-card-top">
+                    <span class="dot-color dot-red"></span>
+                    <span class="term-mini-name">VALORAR</span>
+                  </div>
+                  <p class="term-mini-role">Comprender la complejidad conceptual y técnica de los oficios y materialidades situadas en el territorio.</p>
+                </div>
+
+                <div class="term-mini-card">
+                  <div class="term-mini-card-top">
+                    <span class="dot-color dot-blue"></span>
+                    <span class="term-mini-name">RECONOCER</span>
+                  </div>
+                  <p class="term-mini-role">Aceptar que la validez del saber proyectual no reside exclusivamente en títulos ni claustros académicos.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-action-footer">
+              <a href="#seccion-mas-alla-del-mapa" class="btn-next-editorial" data-scroll-to="seccion-mas-alla-del-mapa">
+                <span>02 MÁS ALLÁ DEL MAPA</span>
+                <span class="arrow-next" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBSECCIÓN 02: MÁS ALLÁ DEL MAPA -->
+      <section class="detail-block-section block-editorial-surface" id="seccion-mas-alla-del-mapa">
+        <div class="container block-inner-wide">
+          <div class="block-top-row">
+            <div class="block-header-text">
+              <div class="block-kicker">02 / MÁS ALLÁ DEL MAPA</div>
+              <h2 class="block-main-heading">¿DÓNDE ESTÁ EL SUR?</h2>
+            </div>
+            <div class="block-header-lead">
+              Las epistemologías del Sur no hacen referencia únicamente a una ubicación geográfica, sino a experiencias sociales marcadas por la exclusión y la resistencia.
+            </div>
+          </div>
+
+          <!-- Composición Editorial de 3 Dimensiones (Territorio, Exclusión, Resistencia) -->
+          <div class="map-dimensions-grid">
+            
+            <!-- 01 — TERRITORIO -->
+            <article class="dimension-card dim-territorio">
+              <div class="dimension-card-header">
+                <span class="dimension-kicker tag-habitar">02 · HABITAR / CUERPO Y ESPACIO</span>
+                <h3 class="dimension-title">01 — TERRITORIO</h3>
+                <h4 class="dimension-subhead">El espacio como relación viva y afectiva.</h4>
+              </div>
+              <p class="dimension-body">
+                El Sur no equivale a la tierra como recurso medible o superficie cartográfica: es el territorio entendido como entramado de afectos, memorias compartidas y cuidados comunitarios. Pensar desde el territorio implica rechazar la pretensión de diseñar desde un «no-lugar» universal.
+              </p>
+              <div class="dimension-quote">
+                “Pensar desde el lugar que se habita, no desde el mapa que se impone.”
+              </div>
+              <div class="dimension-card-footer">
+                <button type="button" class="btn-dimension-action" data-open-concept="40" aria-label="Abrir concepto 40 Territorio en el glosario">
+                  <span>VER CONCEPTO: 40 · TERRITORIO</span>
+                  <span class="action-arrow" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- 02 — EXCLUSIÓN -->
+            <article class="dimension-card dim-exclusion">
+              <div class="dimension-card-header">
+                <span class="dimension-kicker tag-conocer">01 · CONOCER / LÍNEA ABISAL</span>
+                <h3 class="dimension-title">02 — EXCLUSIÓN</h3>
+                <h4 class="dimension-subhead">La descalificación de saberes no eurocéntricos.</h4>
+              </div>
+              <p class="dimension-body">
+                El Sur nombra a las comunidades cuyos conocimientos fueron subordinados por el universalismo moderno. La matriz colonial trazó una separación tajante entre ciencia metropolitana y saberes locales. Superar la exclusión exige cuestionar quién decide qué es válido.
+              </p>
+              <div class="dimension-quote">
+                “Hacer visible lo que el canon decretó inexistente o inferior.”
+              </div>
+              <div class="dimension-card-footer">
+                <button type="button" class="btn-dimension-action" data-open-concept="21" aria-label="Abrir concepto 21 Diversidad Epistemológica en el glosario">
+                  <span>VER CONCEPTO: 21 · DIVERSIDAD EPIST.</span>
+                  <span class="action-arrow" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- 03 — RESISTENCIA -->
+            <article class="dimension-card dim-resistencia">
+              <div class="dimension-card-header">
+                <span class="dimension-kicker tag-desobedecer">03 · DESOBEDECER / REEXISTENCIA</span>
+                <h3 class="dimension-title">03 — RESISTENCIA</h3>
+                <h4 class="dimension-subhead">Autonomías activas y futuros plurales.</h4>
+              </div>
+              <p class="dimension-body">
+                La resistencia no es una reacción pasiva: es reexistencia activa. Sostiene formas propias de comunicar, transmitir saberes y organizarse frente a siglos de asimilación cultural, abriendo alternativas de diseño fundamentadas en el bien común y la soberanía comunitaria.
+              </p>
+              <div class="dimension-quote">
+                “Reexistir: crear mundos donde quepan muchos mundos.”
+              </div>
+              <div class="dimension-card-footer">
+                <button type="button" class="btn-dimension-action" data-open-concept="38" aria-label="Abrir concepto 38 Resistencia en el glosario">
+                  <span>VER CONCEPTO: 38 · RESISTENCIA</span>
+                  <span class="action-arrow" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="block-wide-footer">
+            <div class="footer-tag-left">PENSAR DESDE OTROS LUGARES · MULTIPLICIDAD DE SURES</div>
+            <a href="#seccion-en-diseno" class="btn-next-editorial" data-scroll-to="seccion-en-diseno">
+              <span>03 EN DISEÑO</span>
+              <span class="arrow-next" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBSECCIÓN 03: EN DISEÑO -->
+      <section class="detail-block-section block-editorial-canvas" id="seccion-en-diseno">
+        <div class="container block-inner-wide">
+          <div class="block-top-row">
+            <div class="block-header-text">
+              <div class="block-kicker">03 / EN DISEÑO</div>
+              <h2 class="block-main-heading">DEL CONOCIMIENTO A LA PRÁCTICA</h2>
+            </div>
+            <div class="block-header-lead">
+              En diseño, las epistemologías del Sur no constituyen una teoría abstracta: operan como una metodología crítica para revisar desde dónde investigamos, qué formas legitimamos y con quiénes construimos sentido.
+            </div>
+          </div>
+
+          <!-- 3 Tarjetas de Color de Práctica Proyectual con Acciones Reales -->
+          <div class="practice-cards-grid">
+            
+            <!-- AMPLIAR -->
+            <article class="practice-card card-action-yellow">
+              <div class="practice-card-top">
+                <span class="practice-card-header-tag">01 · FUENTES Y ARCHIVOS</span>
+                <h3 class="practice-card-title">AMPLIAR</h3>
+                <h4 class="practice-card-statement">Ampliar las fuentes de referencia.</h4>
+              </div>
+              <p class="practice-card-detail">
+                Desbordar la biblioteca canónica del diseño eurocentrado. Incorporar gráfica popular, memoria oral, sistemas visuales vernáculos y archivos comunitarios como fundamentos legítimos del proyecto.
+              </p>
+              <div class="practice-card-prompt">
+                <strong>Pregunta de taller:</strong> ¿Qué voces, memorias y genealogías visuales no están presentes en tu bibliografía de diseño?
+              </div>
+              <button type="button" class="btn-practice-action" data-open-concept="39" aria-label="Explorar concepto 39 Saber Situado en el glosario">
+                <span>EXPLORAR: 39 · SABER SITUADO</span>
+                <span class="action-arrow" aria-hidden="true">→</span>
+              </button>
+            </article>
+
+            <!-- VALORAR -->
+            <article class="practice-card card-action-red">
+              <div class="practice-card-top">
+                <span class="practice-card-header-tag">02 · TÉCNICAS Y CONTEXTO</span>
+                <h3 class="practice-card-title">VALORAR</h3>
+                <h4 class="practice-card-statement">Valorar prácticas locales.</h4>
+              </div>
+              <p class="practice-card-detail">
+                Reconocer el rigor y valor de las técnicas artesanales, materialidades territoriales y modos colectivos de producción sin caer en la folklorización estética ni el extractivismo visual.
+              </p>
+              <div class="practice-card-prompt">
+                <strong>Pregunta de taller:</strong> ¿Cómo dialoga tu proyecto con los oficios, materiales y necesidades de su entorno real?
+              </div>
+              <button type="button" class="btn-practice-action" data-open-concept="20" aria-label="Explorar concepto 20 Diseño Situado en el glosario">
+                <span>EXPLORAR: 20 · DISEÑO SITUADO</span>
+                <span class="action-arrow" aria-hidden="true">→</span>
+              </button>
+            </article>
+
+            <!-- RECONOCER -->
+            <article class="practice-card card-action-blue">
+              <div class="practice-card-top">
+                <span class="practice-card-header-tag">03 · SABERES Y AUTONOMÍAS</span>
+                <h3 class="practice-card-title">RECONOCER</h3>
+                <h4 class="practice-card-statement">Reconocer que la producción de conocimiento excede los ámbitos académicos tradicionales.</h4>
+              </div>
+              <p class="practice-card-detail">
+                Comprender que los saberes proyectuales no nacen únicamente de la universidad ni de agencias corporativas: emergen de comunidades vivas que resuelven colectivamente su existencia.
+              </p>
+              <div class="practice-card-prompt">
+                <strong>Pregunta de taller:</strong> ¿Para quién y con quién estás diseñando? ¿Quién valida las decisiones de tu trabajo?
+              </div>
+              <button type="button" class="btn-practice-action" data-open-concept="28" aria-label="Explorar concepto 28 Justicia Cognitiva en el glosario">
+                <span>EXPLORAR: 28 · JUSTICIA COGNITIVA</span>
+                <span class="action-arrow" aria-hidden="true">→</span>
+              </button>
+            </article>
+
+          </div>
+
+          <div class="block-wide-footer">
+            <div class="footer-tag-left">TRANSFORMACIÓN DE LA PRAXIS · DISEÑO DECOLONIAL</div>
+            <a href="#seccion-relacionados" class="btn-next-editorial" data-scroll-to="seccion-relacionados">
+              <span>04 CONCEPTOS RELACIONADOS</span>
+              <span class="arrow-next" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBSECCIÓN 04: CONCEPTOS RELACIONADOS -->
+      <section class="detail-block-section block-editorial-surface" id="seccion-relacionados">
+        <div class="container block-inner-wide">
+          <div class="block-top-row">
+            <div class="block-header-text">
+              <div class="block-kicker">04 / RELACIONADOS</div>
+              <h2 class="block-main-heading">CONSTELACIÓN DE SABERES VINCULADOS</h2>
+            </div>
+            <div class="block-header-lead">
+              Epistemologías del Sur conecta de manera orgánica con el glosario completo: articula preguntas sobre cómo se produce el saber, desde qué territorio se habita y cómo se transforma la práctica proyectual. Hacé click en cualquier concepto para abrir su ficha completa.
+            </div>
+          </div>
+
+          <!-- Constelación Conceptual Estructurada en 3 Ejes (Vista Desktop) -->
+          <div class="related-constellation-container constellation-desktop-grid">
+            
+            <!-- Eje 1: Validar y Situar el Saber (Familia Conocer · Amarillo) -->
+            <div class="constellation-axis-group">
+              <div class="axis-header">
+                <span class="axis-badge tag-conocer">EJE 01 · DESDE LA PRODUCCIÓN DEL SABER</span>
+                <span class="axis-title">Cuestionar la universalidad y situar la mirada</span>
+              </div>
+              <div class="axis-cards-pair">
+                
+                <!-- Concepto 39: Saber Situado -->
+                <button type="button" class="constellation-card axis-conocer" data-open-concept="39" aria-label="Abrir concepto 39 Saber Situado">
+                  <div class="constellation-card-top">
+                    <span class="card-family-tag tag-conocer">
+                      <span class="dot-color dot-yellow"></span>
+                      01 · CONOCER
+                    </span>
+                    <span class="card-concept-num-badge">39</span>
+                  </div>
+                  <h3 class="constellation-card-title">SABER SITUADO</h3>
+                  <p class="constellation-card-rationale">
+                    Declara desde qué posición corporal, histórica y geográfica se produce todo conocimiento, desmontando la neutralidad abstracta.
+                  </p>
+                  <span class="constellation-card-action">
+                    <span>ABRIR EN GLOSARIO</span>
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </button>
+
+                <!-- Concepto 21: Diversidad Epistemológica -->
+                <button type="button" class="constellation-card axis-conocer" data-open-concept="21" aria-label="Abrir concepto 21 Diversidad Epistemológica">
+                  <div class="constellation-card-top">
+                    <span class="card-family-tag tag-conocer">
+                      <span class="dot-color dot-yellow"></span>
+                      01 · CONOCER
+                    </span>
+                    <span class="card-concept-num-badge">21</span>
+                  </div>
+                  <h3 class="constellation-card-title">DIVERSIDAD EPISTEMOLÓGICA</h3>
+                  <p class="constellation-card-rationale">
+                    Reconoce la multiplicidad de sistemas de pensamiento legítimos frente a la pretensión monocultural de la ciencia moderna.
+                  </p>
+                  <span class="constellation-card-action">
+                    <span>ABRIR EN GLOSARIO</span>
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+            <!-- Eje 2: Espacio Vivido y lo Colectivo (Familia Habitar · Rojo) -->
+            <div class="constellation-axis-group">
+              <div class="axis-header">
+                <span class="axis-badge tag-habitar">EJE 02 · DESDE EL ESPACIO HABITADO</span>
+                <span class="axis-title">Cuerpo, memoria comunitaria y territorio vivo</span>
+              </div>
+              <div class="axis-cards-pair">
+                
+                <!-- Concepto 40: Territorio -->
+                <button type="button" class="constellation-card axis-habitar" data-open-concept="40" aria-label="Abrir concepto 40 Territorio">
+                  <div class="constellation-card-top">
+                    <span class="card-family-tag tag-habitar">
+                      <span class="dot-color dot-red"></span>
+                      02 · HABITAR
+                    </span>
+                    <span class="card-concept-num-badge">40</span>
+                  </div>
+                  <h3 class="constellation-card-title">TERRITORIO</h3>
+                  <p class="constellation-card-rationale">
+                    El Sur se materializa en el territorio como tejido de afectos, relaciones y memorias compartidas que resisten la lógica extractivista.
+                  </p>
+                  <span class="constellation-card-action">
+                    <span>ABRIR EN GLOSARIO</span>
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </button>
+
+                <!-- Concepto 02: Comunidad -->
+                <button type="button" class="constellation-card axis-habitar" data-open-concept="2" aria-label="Abrir concepto 02 Comunidad">
+                  <div class="constellation-card-top">
+                    <span class="card-family-tag tag-habitar">
+                      <span class="dot-color dot-red"></span>
+                      02 · HABITAR / PUENTE
+                    </span>
+                    <span class="card-concept-num-badge">02</span>
+                  </div>
+                  <h3 class="constellation-card-title">COMUNIDAD</h3>
+                  <p class="constellation-card-rationale">
+                    Sujeto colectivo que crea, transmite y custodia los saberes situados que las epistemologías del Sur buscan visibilizar.
+                  </p>
+                  <span class="constellation-card-action">
+                    <span>ABRIR EN GLOSARIO</span>
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+            <!-- Eje 3: Praxis Decolonial y Encuentro (Tri-cromático · Relacionar) -->
+            <div class="constellation-axis-group">
+              <div class="axis-header">
+                <span class="axis-badge tag-relacionar">EJE 03 · PRAXIS DECOLONIAL Y DISEÑO</span>
+                <span class="axis-title">Igualdad epistémica y metodología proyectual</span>
+              </div>
+              <div class="axis-cards-pair">
+                
+                <!-- Concepto 28: Justicia Cognitiva -->
+                <button type="button" class="constellation-card axis-relacionar" data-open-concept="28" aria-label="Abrir concepto 28 Justicia Cognitiva">
+                  <div class="constellation-card-top">
+                    <span class="card-family-tag tag-relacionar">
+                      <span class="triad-dots"><span class="dot-yellow"></span><span class="dot-red"></span><span class="dot-blue"></span></span>
+                      04 · ENCUENTRO
+                    </span>
+                    <span class="card-concept-num-badge">28</span>
+                  </div>
+                  <h3 class="constellation-card-title">JUSTICIA COGNITIVA</h3>
+                  <p class="constellation-card-rationale">
+                    Principio fundante de Sousa Santos: la igualdad epistémica entre distintas formas de saber como condición indispensable para la justicia social.
+                  </p>
+                  <span class="constellation-card-action">
+                    <span>ABRIR EN GLOSARIO</span>
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </button>
+
+                <!-- Concepto 20: Diseño Situado -->
+                <button type="button" class="constellation-card axis-relacionar" data-open-concept="20" aria-label="Abrir concepto 20 Diseño Situado">
+                  <div class="constellation-card-top">
+                    <span class="card-family-tag tag-relacionar">
+                      <span class="triad-dots"><span class="dot-yellow"></span><span class="dot-red"></span><span class="dot-blue"></span></span>
+                      04 · ENCUENTRO
+                    </span>
+                    <span class="card-concept-num-badge">20</span>
+                  </div>
+                  <h3 class="constellation-card-title">DISEÑO SITUADO</h3>
+                  <p class="constellation-card-rationale">
+                    La traducción proyectual directa: diseñar reconociendo los sesgos, memorias y condiciones materiales de cada territorio concreto.
+                  </p>
+                  <span class="constellation-card-action">
+                    <span>ABRIR EN GLOSARIO</span>
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Constelación Mobile: Carrusel Editorial de 1 Card por vez -->
+          <div class="constellation-carousel-mobile" id="constellation-mobile-carousel">
+            <div class="route-cards-carousel-container constellation-carousel-container" data-route="constellation">
+              <button type="button" class="carousel-arrow-btn arrow-prev" data-route="constellation" aria-label="Concepto vinculado anterior">
+                <span aria-hidden="true">←</span>
+              </button>
+              <div class="concepts-grid grid-constellation" id="grid-constellation">
+                
+                <!-- Card 1: 39 Saber Situado -->
+                <article class="concept-card constellation-carousel-card card-family-conocer active-mobile-card" tabindex="0" role="button" data-route="conocer" data-open-concept="39" aria-label="Abrir concepto 39 Saber Situado en el glosario">
+                  <div class="card-content-inner">
+                    <div class="card-meta-row">
+                      <div class="card-meta-left">
+                        <div class="card-family-tag tag-conocer">
+                          <span class="dot-color dot-yellow"></span>
+                          01 · CONOCER
+                        </div>
+                        <span class="card-concept-num-badge">39</span>
+                      </div>
+                      <span class="card-index-counter">01 / 06</span>
+                      <span class="concept-card-arrow" aria-hidden="true">→</span>
+                    </div>
+                    <div class="constellation-card-axis-pill">EJE 01 · DESDE LA PRODUCCIÓN DEL SABER</div>
+                    <h3 class="concept-card-title">SABER SITUADO</h3>
+                    <p class="concept-card-snippet">Declara desde qué posición corporal, histórica y geográfica se produce todo conocimiento, desmontando la neutralidad abstracta.</p>
+                    <div class="concept-card-mobile-action">
+                      <span class="concept-card-mobile-btn">
+                        ABRIR EN GLOSARIO <span class="action-arrow">→</span>
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Card 2: 21 Diversidad Epistemológica -->
+                <article class="concept-card constellation-carousel-card card-family-conocer" tabindex="0" role="button" data-route="conocer" data-open-concept="21" aria-label="Abrir concepto 21 Diversidad Epistemológica en el glosario">
+                  <div class="card-content-inner">
+                    <div class="card-meta-row">
+                      <div class="card-meta-left">
+                        <div class="card-family-tag tag-conocer">
+                          <span class="dot-color dot-yellow"></span>
+                          01 · CONOCER
+                        </div>
+                        <span class="card-concept-num-badge">21</span>
+                      </div>
+                      <span class="card-index-counter">02 / 06</span>
+                      <span class="concept-card-arrow" aria-hidden="true">→</span>
+                    </div>
+                    <div class="constellation-card-axis-pill">EJE 01 · DESDE LA PRODUCCIÓN DEL SABER</div>
+                    <h3 class="concept-card-title">DIVERSIDAD EPISTEMOLÓGICA</h3>
+                    <p class="concept-card-snippet">Reconoce la multiplicidad de sistemas de pensamiento legítimos frente a la pretensión monocultural de la ciencia moderna.</p>
+                    <div class="concept-card-mobile-action">
+                      <span class="concept-card-mobile-btn">
+                        ABRIR EN GLOSARIO <span class="action-arrow">→</span>
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Card 3: 40 Territorio -->
+                <article class="concept-card constellation-carousel-card card-family-habitar" tabindex="0" role="button" data-route="habitar" data-open-concept="40" aria-label="Abrir concepto 40 Territorio en el glosario">
+                  <div class="card-content-inner">
+                    <div class="card-meta-row">
+                      <div class="card-meta-left">
+                        <div class="card-family-tag tag-habitar">
+                          <span class="dot-color dot-red"></span>
+                          02 · HABITAR
+                        </div>
+                        <span class="card-concept-num-badge">40</span>
+                      </div>
+                      <span class="card-index-counter">03 / 06</span>
+                      <span class="concept-card-arrow" aria-hidden="true">→</span>
+                    </div>
+                    <div class="constellation-card-axis-pill">EJE 02 · DESDE EL ESPACIO HABITADO</div>
+                    <h3 class="concept-card-title">TERRITORIO</h3>
+                    <p class="concept-card-snippet">El Sur se materializa en el territorio como tejido de afectos, relaciones y memorias compartidas que resisten la lógica extractivista.</p>
+                    <div class="concept-card-mobile-action">
+                      <span class="concept-card-mobile-btn">
+                        ABRIR EN GLOSARIO <span class="action-arrow">→</span>
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Card 4: 02 Comunidad -->
+                <article class="concept-card constellation-carousel-card card-family-habitar" tabindex="0" role="button" data-route="habitar" data-open-concept="2" aria-label="Abrir concepto 02 Comunidad en el glosario">
+                  <div class="card-content-inner">
+                    <div class="card-meta-row">
+                      <div class="card-meta-left">
+                        <div class="card-family-tag tag-habitar">
+                          <span class="dot-color dot-red"></span>
+                          02 · HABITAR / PUENTE
+                        </div>
+                        <span class="card-concept-num-badge">02</span>
+                      </div>
+                      <span class="card-index-counter">04 / 06</span>
+                      <span class="concept-card-arrow" aria-hidden="true">→</span>
+                    </div>
+                    <div class="constellation-card-axis-pill">EJE 02 · DESDE EL ESPACIO HABITADO</div>
+                    <h3 class="concept-card-title">COMUNIDAD</h3>
+                    <p class="concept-card-snippet">Sujeto colectivo que crea, transmite y custodia los saberes situados que las epistemologías del Sur buscan visibilizar.</p>
+                    <div class="concept-card-mobile-action">
+                      <span class="concept-card-mobile-btn">
+                        ABRIR EN GLOSARIO <span class="action-arrow">→</span>
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Card 5: 28 Justicia Cognitiva -->
+                <article class="concept-card constellation-carousel-card card-family-relacionar" tabindex="0" role="button" data-route="relacionar" data-open-concept="28" aria-label="Abrir concepto 28 Justicia Cognitiva en el glosario">
+                  <div class="card-content-inner">
+                    <div class="card-meta-row">
+                      <div class="card-meta-left">
+                        <div class="card-family-tag tag-relacionar">
+                          <span class="triad-dots"><span class="dot-yellow"></span><span class="dot-red"></span><span class="dot-blue"></span></span>
+                          04 · ENCUENTRO
+                        </div>
+                        <span class="card-concept-num-badge">28</span>
+                      </div>
+                      <span class="card-index-counter">05 / 06</span>
+                      <span class="concept-card-arrow" aria-hidden="true">→</span>
+                    </div>
+                    <div class="constellation-card-axis-pill">EJE 03 · PRAXIS DECOLONIAL Y DISEÑO</div>
+                    <h3 class="concept-card-title">JUSTICIA COGNITIVA</h3>
+                    <p class="concept-card-snippet">Principio fundante de Sousa Santos: la igualdad epistémica entre distintas formas de saber como condición indispensable para la justicia social.</p>
+                    <div class="concept-card-mobile-action">
+                      <span class="concept-card-mobile-btn">
+                        ABRIR EN GLOSARIO <span class="action-arrow">→</span>
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Card 6: 20 Diseño Situado -->
+                <article class="concept-card constellation-carousel-card card-family-relacionar" tabindex="0" role="button" data-route="relacionar" data-open-concept="20" aria-label="Abrir concepto 20 Diseño Situado en el glosario">
+                  <div class="card-content-inner">
+                    <div class="card-meta-row">
+                      <div class="card-meta-left">
+                        <div class="card-family-tag tag-relacionar">
+                          <span class="triad-dots"><span class="dot-yellow"></span><span class="dot-red"></span><span class="dot-blue"></span></span>
+                          04 · ENCUENTRO
+                        </div>
+                        <span class="card-concept-num-badge">20</span>
+                      </div>
+                      <span class="card-index-counter">06 / 06</span>
+                      <span class="concept-card-arrow" aria-hidden="true">→</span>
+                    </div>
+                    <div class="constellation-card-axis-pill">EJE 03 · PRAXIS DECOLONIAL Y DISEÑO</div>
+                    <h3 class="concept-card-title">DISEÑO SITUADO</h3>
+                    <p class="concept-card-snippet">La traducción proyectual directa: diseñar reconociendo los sesgos, memorias y condiciones materiales de cada territorio concreto.</p>
+                    <div class="concept-card-mobile-action">
+                      <span class="concept-card-mobile-btn">
+                        ABRIR EN GLOSARIO <span class="action-arrow">→</span>
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <button type="button" class="carousel-arrow-btn arrow-next" data-route="constellation" aria-label="Concepto vinculado siguiente">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="carousel-dots-row" id="dots-constellation" aria-label="Navegación de conceptos vinculados"></div>
+          </div>
+
+          <div class="detail-bottom-return-bar">
+            <a href="#relacionar" class="btn-return-big" id="detail-bottom-return-btn">
+              <span class="arrow-back" aria-hidden="true">←</span> VOLVER AL RECORRIDO RELACIONAR
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /#view-detail -->
+
+  </main>
+
+  <!-- MODAL / DRAWER EDITORIAL PARA TODAS LAS ENTRADAS DEL GLOSARIO -->
+  <div class="concept-drawer-backdrop" id="concept-drawer-backdrop" aria-hidden="true">
+    <aside class="concept-drawer-panel" id="concept-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-concept-title">
+      <div class="drawer-chromatic-accent" id="drawer-chromatic-accent"></div>
+      <div class="drawer-header">
+        <div class="drawer-meta-tags">
+          <span class="drawer-badge" id="drawer-number">00</span>
+          <span class="drawer-route-tag" id="drawer-route-tag">RUTA</span>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Cerrar ficha">
+          ✕
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <h2 class="drawer-title" id="drawer-concept-title">TÍTULO DEL CONCEPTO</h2>
+        
+        <div class="drawer-author-box" id="drawer-author-box" style="display: none;">
+          <span class="author-label">REFERENCIA AUTORAL / PENSAMIENTO:</span>
+          <span class="author-name" id="drawer-author-name"></span>
+        </div>
+
+        <div class="drawer-definition-box">
+          <p class="drawer-definition-text" id="drawer-definition-text"></p>
+        </div>
+
+        <div class="drawer-tags-container">
+          <span class="drawer-tags-label">ETIQUETAS TEMÁTICAS:</span>
+          <div class="drawer-tags-list" id="drawer-tags-list"></div>
+        </div>
+
+        <div class="drawer-related-container">
+          <span class="drawer-related-label">CONCEPTOS RELACIONADOS:</span>
+          <div class="drawer-related-list" id="drawer-related-list"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p class="footer-project-title">TP5 — TIPOGRAFÍA E INTERFACES DIGITALES</p>
+        <p class="footer-course">Tipografía 2 · Cátedra Cosgaya · FADU UBA · Comisión: PATO + JUANCHO</p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-assigned">Concepto Asignado: <strong>22 — Epistemologías del Sur</strong></p>
+        <p class="footer-specs">Desktop 1440 × 1024 px · Total 41 conceptos</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BADGE FLOTANTE DE CONTROL DE PROTOTIPOS -->
+  <aside id="prototype-badge" class="prototype-floating-badge" aria-label="Control de prototipos Desktop y Mobile">
+    <div class="prototype-badge-content">
+      <span class="prototype-badge-label" id="prototype-badge-label">
+        <span class="prototype-badge-dot" aria-hidden="true"></span>
+        <span id="prototype-badge-text">PROTOTIPO DESKTOP · 1440 × 1024 PX</span>
+      </span>
+      <a href="index.html?version=mobile" id="prototype-badge-link" class="prototype-badge-btn" aria-label="Cambiar a prototipo Mobile">
+        📱 Ver Mobile (390 × 844) →
+      </a>
+      <button type="button" id="prototype-badge-close" class="prototype-badge-dismiss" aria-label="Ocultar aviso de prototipo" title="Ocultar aviso">
+        ✕
+      </button>
+    </div>
+  </aside>
+
+  <!-- SHELL DE PRESENTACIÓN DE DISPOSITIVO MOBILE (PARA VISUALIZACIÓN EN ESCRITORIO) -->
+  <div id="device-preview-shell" class="device-preview-shell" style="display: none;" aria-label="Visualizador de Prototipo Mobile 390 × 844 px">
+    <header class="device-studio-header">
+      <div class="device-studio-brand">
+        <span class="device-studio-tag">TP5 · TIPOGRAFÍA E INTERFACES DIGITALES</span>
+        <h1 class="device-studio-title">DISEÑO DECOLONIAL</h1>
+      </div>
+      <div class="device-studio-center">
+        <div class="device-badge-active">
+          <span class="dot-color dot-yellow"></span>
+          <span>PROTOTIPO MOBILE · 390 × 844 PX</span>
+        </div>
+      </div>
+      <div class="device-studio-actions">
+        <a href="index.html?version=desktop" id="device-btn-desktop" class="device-action-btn btn-secondary">
+          🖥 Ver Desktop (1440 × 1024)
+        </a>
+        <button type="button" id="device-btn-copy" class="device-action-btn btn-primary" title="Copiar enlace directo a este prototipo mobile">
+          📋 Copiar Enlace Mobile
+        </button>
+        <a href="index.html?version=mobile&embed=1" target="_blank" rel="noopener noreferrer" id="device-btn-fullscreen" class="device-action-btn btn-icon" title="Abrir en pestaña nueva">
+          ↗ Pantalla completa
+        </a>
+      </div>
+    </header>
+
+    <main class="device-stage-container">
+      <div class="device-mockup-wrapper">
+        <div class="device-mockup-bezel">
+          <!-- Dynamic Island / Speaker notch -->
+          <div class="device-dynamic-island" aria-hidden="true">
+            <span class="device-camera-lens"></span>
+          </div>
+          
+          <!-- Iframe que carga el prototipo real en 390x844 -->
+          <iframe id="mobile-device-iframe" class="device-screen-iframe" title="Pantalla interactiva del prototipo mobile" loading="eager"></iframe>
+
+          <!-- Home indicator bar -->
+          <div class="device-home-bar" aria-hidden="true"></div>
+        </div>
+        
+        <p class="device-hint-caption">
+          Navegación interactiva completa · Arrastrá para swipe, usá flechas o tocá las cards · Drawers y rutas habilitadas
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
